@@ -22,6 +22,7 @@ Y = tf.placeholder(tf.float32, [None, 10])
 
 # weights & bias for nn layers
 # http://stackoverflow.com/questions/33640581/how-to-do-xavier-initialization-on-tensorflow
+# He's initializer -> tf.contrib.layers.variance_scaling_initializer()
 W1 = tf.get_variable("W1", shape=[784, 256],
                      initializer=tf.contrib.layers.xavier_initializer())
 b1 = tf.Variable(tf.random_normal([256]))
